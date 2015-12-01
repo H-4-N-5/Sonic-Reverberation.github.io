@@ -1,0 +1,385 @@
+<!--********************************************************
+*  _____         _                                         *
+* |_   _|__  ___| |__   ___   ___ _ __ __ _  ___ _   _     *
+*   | |/ _ \/ __| '_ \ / _ \ / __| '__/ _` |/ __| | | |    *
+*   | |  __/ (__| | | | (_) | (__| | | (_| | (__| |_| |    *
+*   |_|\___|\___|_| |_|\___/ \___|_|  \__,_|\___|\__, |    *
+*                                                |___/     * 
+*                                                          *
+*        University of Colorado at Boulder - 2015          *
+*********************************************************-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- //////////// -->
+<!-- //  HEAD  // -->
+<!-- //////////// -->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="img/png" href="images/JaneLogo.png">
+
+  <link href="css/nv.d3.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+    <script src="javascripts/nv.d3.min.js"></script>
+
+  <!-- ///////////// -->
+  <!-- //  TITLE // -->
+  <!-- //////////// -->
+  <title>Techocracy</title> 
+
+
+  <!-- ////////////////////// -->
+  <!-- //   CURSOR EFFECT  // -->
+  <!-- ////////////////////// -->
+  <script type="text/javascript" src="http://24work-new.googlecode.com/svn/trunk/24work-blogspot/snow-cursor/code/061_dark_turquoise_3b9c9c_24work.blogspot.com.js"></script><a href="http://24work.blogspot.com/" target="_blank" title="Blogger Tricks"><img src="https://bitly.com/24workpng1" alt="Blogger Tricks" border="0" style="position: fixed; bottom: 10%; right: 0%; top: 0px;" ></a>
+
+
+  <!-- ////////////////////// -->
+  <!-- //  BOOTSTRAP STUFF // -->
+  <!-- ////////////////////// -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+ 
+
+  <!-- ////////////////////// -->
+  <!-- //    OUR STYLEZ    // -->
+  <!-- ////////////////////// -->
+  <link rel="stylesheet" href="css/custom.css" >
+  <link href="theme.css" rel="stylesheet">
+  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+  <style>
+    svg { display:inherit; margin: 0px; padding: 0px; height: 90%;width: 90% }
+  </style>
+
+
+</head>    <!--  END OF HEAD!
+
+
+-->
+<!-- //////////// -->
+<!-- //  BODY  // -->
+<!-- //////////// -->
+<body role="document">
+
+      <!-- /////////////////// -->
+      <!-- //  TOP NAV BAR  // -->
+      <!-- /////////////////// -->
+      <nav class="navbar navbar-inner navbar-fixed-top transparent">
+        <div 
+        class="container" 
+        style="background-color:#008888; 
+        height: 4em;
+        width:100%;
+        opacity: .8;
+        ">
+          <div class="navbar-header">
+
+            <img src = "images/JaneLogo.png" width = "40px" height = "40px"> 
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+          </div>
+          <span></span>
+          <div id="navbar" class="navbar-collapse collapse" style="font-size:2em;">
+            <ul class="nav navbar-nav">
+              <div class="col-xs-12" style="width:3em;"></div>
+              <li class="active"><a href="#">Home</a></li>
+              <div class="col-xs-12" style="width:2em;"></div>
+              <li><a href="#self">Self</a></li>
+              <div class="col-xs-12" style="width:2em;"></div>
+              <li><a href="#community">Community</a></li>
+              <div class="col-xs-12" style="width:2em;"></div>
+              <li><a href="#love">Love</a></li>
+              <div class="col-xs-12" style="height:9em;"></div>
+
+            </ul>
+          </div>  
+        </div>
+      </nav>
+
+      <!-- /////////////////// -->
+      <!-- //    BANNER     // -->
+      <!-- /////////////////// -->
+      <img src="images/FINAL-DDE2.png" width=100% />
+
+      <div class="container theme-showcase" role="main">
+
+
+
+      <!-- /////////////////// -->
+      <!-- //  MAIN CONTENT // -->
+      <!-- /////////////////// -->
+      <div class="container">
+
+
+        <div class="row">
+
+            <div class="col-md-8 container col-md-offset-2" >
+            
+              <h2>
+                Technology plays a large role in all of our lives; however, we rarely take the time to think about this in detail. We have researched, discussed and analyzed the impact technology has on the self, community and love in order to make sense of life in the ever changing digital era.
+              </h2>
+
+              <div class="col-xs-12" style="height:5em;"></div>
+
+
+
+            
+              <!-- /////////////////// -->
+              <!-- //     SELF      // -->
+              <!-- /////////////////// -->
+              <!-- made some text in photoshop for section label -Hans -->
+              <img src="images/section-logos/SELF_logo.png" id="self"/> 
+
+
+              <div class="col-xs-12"></div>
+
+              <image src="images/self_1.jpg" alt="vote" style="float:center;width:50em;">
+                
+              <div class="col-xs-12" style="height:2em;"></div>
+
+              <p class="text-centered">
+                  With the emergence of new technologies such as smartphones, personal computers, and the prolific use of the internet, the way we present ourselves and interact with others has changed dramatically. Our lives have become so overwhelmed with these devices and social networking sites, that one must wonder how the interactions with ourselves has been altered? Before we begin to understand the relationships we have with others, from a loved one to a entire community, we must first understand the relationship we have with ourselves. 
+                  <br/>
+                <p>
+                  Freud had taught that each individual poses multiple selves, the id, ego, and superego, the layers within us that govern our actions. The id can be described as unconscious, uncoordinated, and instinctual emotional pulls that are constantly fighting to control our actions. Our ego seeks pleasure and avoids pain, concerned primarily with realistic methods to obtain pleasure. The superego, also known as the rational self, forces us to reevaluate our choices and stops us from making irrational decisions that stem from the id. Lastly, our ego mediates between the deeper desires of the id and the rational decision making center, the superego, finding common ground between the two.
+                  <br/>
+                <p>
+                  These layers of the self have changed over time as society and technology have evolved and have thus changed the way we see ourselves and act within humanity. Though the id may directly interact with our anonymous selves on the internet, we want to focus on how we have changed more openly on social media, not the dirty desires that can be satiated through various sites. From personal experience, we have generally become more self aware. With every growing generation, people, especially the younger generations, have begun to shape their lives through the use of various technologies, especially the emergence of social networking sites (SNS).
+                  <br/>
+                <p>
+                  We conducted a survey <a href="https://docs.google.com/a/colorado.edu/forms/d/147yJs4htFuVceHt4wBJPdVQZwQY77CA8udpSvpIeKII/viewanalytics?usp=form_confirm" style="color:blue;">(link to survey!)</a> in which we could better understand the varying relationships we have with ourselves, others, and society in relation to our changing technologies. We received 170 responses from which to analyze. In regards to the self, we wanted to understand aspects, such as, how accurately our lives are portrayed online, how frequently these respondents use these technologies, and gain insight into self-promoting practices. 
+                  <br/>
+                <p>
+                  Many of us have become more concerned with the way we are perceived through the internet and therefore have created a new way of determining self worth. Plain and simple, someone may now view themselves as less than others on the web where others are beginning to view themselves as much better than others, and that is often determined superficially. For example, prior to the prevalence of social media and personal devices, people turned to physical interactions for personal validation and connection. According to scientists at UCLA, most recent generations have lost the ability to recognize social cues due to this change and are now substituting this lack of emotion in textual conversations with things like emoticons. 
+                  <br/>
+                <p>
+                  A person may post lots of “selfies” and get a high response rate and therefore may value themselves more highly than deserved or for the wrong reasons. Alternatively, someone who is very intelligent, creative, traveled, and so forth, may not be concerned with social medias and therefore may go unrecognized for their value. Though only four people the of 164 that answered admitted to sharing more than 10 “selfies” a month, we believe that this number is not an honest representation of how people use social media for personal elation. From personal experience, we are lead to believe that people aren’t comfortable with admitting their level of narcissism on social media.  
+                  <br/>
+                <p>
+                  They way in which we display our lives online reveals a great deal about how we want to be viewed. This relates directly back to the idea of the superego, as it crafts a perfect simulacrum of our egos.  A respondent to our survey question, “How accurately does your personality on social media reflect your real life?” stated, “It's more of a highlight reel. My favorite moments all in one place.” We feel this comment accurately sums up many of our experiences on social media. We are constantly sharing all the good and leaving out the ugly in our lives. Knowing this, how may it affect the way we handle real personal dilemmas? Will the face-to-face social responses become no longer good enough? And how will we begin to view ourselves beyond the screen?
+                  Another respondent explained, “I consider my social media profile a parallel persona. Obviously it is not an accurate depiction of my real life because my daily life is full of awful things I do to make money, keep organized, remain healthy, and avoid going insane. Social media lets me slough off the top 5% of things that happen throughout my day and present the information in an interesting manner that may generate other people’s interactions.” 
+                  <br/>
+                <p>
+                  These ideas of self worth play into the steady rise in narcissism over the past few generations. In a cross-temporal meta analysis on narcissistic personality inventory (NPI), researchers discovered that narcissism levels have risen over the generations between 1980 and 2006. This was done through the NPI study where students from 85 American colleges took a 40 item forced-choice survey. 
+                  <br/>
+                <p>
+                  First of all, let us define narcissism as “positive and inflated view of the self” especially in traits concerning power, importance, and attractiveness. Oddly enough the researchers who conducted the study did not mention much of  the rise in technology use and prevalence of social media. In fact, they raised the idea that it isn’t technology that changed narcissism but it was our narcissism that changed the way we use the technology. Either way, there are clear connections that can be made. 
+                  <br/>
+                <p>
+                  Through the study they discovered that this form of narcissism relied on a “wide range of self regulation” (controlled by the superego) all of which were aimed towards controlling the way the person was perceived (the ego). This type of self regulation can be seen amongst social media use as many people use it as a way of expressing themselves. Also with the rise in other technologies, for example photo editing software and easy to use cameras, people have the ability to alter their appearance from what they look like day-to-day. This is obvious. The study explains that this self regulation is in an effort for “attention seeking, and taking credit from others, to seeking high status romantic partners and opportunities to achieve public glory.” 
+                  <br/>
+                <p>
+                To the common person looking to achieve such narcissistic goals, the positive outcome is unfortunately short term. We gain short bursts of self gratification, have the ability to express ourselves however we please, and develop a sort of chronological timeline of the rollercoaster that is our lives. But what many fail to realize is that social media use and increased narcissism can actually be more harmful to the individual, other people, and society, in the long run. The study even claimed that “recent college students are approaching celebrities on their level of narcissism”. Is this really who we want to become? Is this what we want our generation to be remembered for?
+              </p>
+              <br/><br/><br/><br/>
+
+
+
+
+              <!-- /////////////////// -->
+              <!-- //   COMMUNITY   // -->
+              <!-- /////////////////// -->
+              <!-- made some text in photoshop for section label -Hans -->
+              <img src="images/section-logos/COMMUNITY_logo.png" id="community" /> 
+
+
+              <div class="col-xs-12"></div>
+
+              <image src="images/community.jpg" alt="vote" style="float:left;width:50em;">
+
+              <div class="col-xs-12" style="height:2em;"></div>
+              <p>
+                We are all part of many different communities whether we are aware of it or not. In this world, we all work together to make life easier and to expand our networks. This makes it possible for us to reach heights we could never reach on our own. Community comes into play when individuals in the community help someone in need, for example, when someone’s house burns down. Communities make it so we can expand our knowledge and share resources. We could have never landed on the moon if we hadn’t worked together as taxpayers, astronauts and engineers to get there.
+                <br/>
+              <p>
+                A community, according to the Oxford dictionary, is “a group of people living in the same place or having a particular characteristic in common” (Definition). There are many different types of communities: internet communities, neighbourhoods, towns, social groups, and global communities; they all play different roles in our lives and help us grow in different ways. Communities are very important because without them, we would do everything ourselves. We certainly can not reach specific goals (ex. building roads) individually, but in a community, it becomes possible when we pull resources together, and every member can benefit from it.  Communities make it so individuals can get things done as well as have support systems. 
+                <br/>
+              <p>
+                Considering the definition of “community”, we can see a rise of an interesting question: is the definition of community changing? Many of us in the digital era are heavily involved with virtual communities; this may not fit the definition of a community because it is not in the same local place, but still has characteristics of a community because there are like-minded members who have the same goals and specific characteristics. The internet makes it so we are all in the same place; it is just this virtual space that we can connect to from wherever we are.
+                <br/>
+              <p>
+                Aside from the literal differences, physical communities seem to be different from virtual ones in the way members interact with one another and what they gain from it. For example, an art professor at CU Boulder, in an interview, highlighted the importance of being part of local art communities. Members go to each other’s events, co-operate in projects, and effectively create jobs as a result. “This is the kind of support that you cannot easily get from virtual communities.”, he said.
+                <br/>
+              <p>
+                Let us zoom back and look at how technology is changing the way we participate in communities. We used to be active members of our local communities like our neighborhood, for instance. This is not the case anymore for a large number of people. We may have become less connected to our local communities, and the activities happening in the community, but we have certainly become more connected to global communities as technology becomes an integral part of our lives, more so than in the past. Online networks help people communicate with one another, but they don’t seem to be as effective as physical communities when it comes to taking action. 
+                <br/>
+              <p>
+                One of the most prominent examples of the internet community and the local community, is the rise of internet social activism. In Tweets and the Streets, Paolo Gerbaudo studies the cases of #OccupyWallStreet on Twitter, Facebook’s Kullena Said in Egypt and Democracia Real Ya in Spain. 
+                <br/>
+              <p>
+                The integration of both the social internet community and the streets, are strengthened by the outstanding work done by Facebook’s Kullena Said and Democracia Real Ya. To put it into perspective, #OccupyWallStreet on Twitter was seen as an internet disaster, and needed the help of the streets in order to receive the followings it needed. The argument states that Kullena Said and Democracia Real Ya used Facebook, a platform that had more active users than Twitter would see in a week. The group’s posts were also emotional and captivating, allowing the perspective follower to interact and identify themselves to the post. These created a strong affiliation of individuals to take protests on the streets, which in turn, garnered the worldwide attention it deserved. On the contrary, #OccupyWallStreet urgently required activism off the internet in order to gain the attention needed for the cause. #OccupyWallStreet relied on Twitter and the power of the hashtag. The conversation barely trended, and by the time the cause had moved to Facebook, they lacked the language needed to engage the followers. The main cause of #OccupyWallStreet’s national spotlight was due to the small protest in Zuccotti Park in New York, and the attack by the NYPD to a group of protesters on the Brooklyn Bridge. It was this that acquired the scrutiny of national news outlets. 
+                <br/>
+              <p>
+                Understanding that both internet activism and street activism are both excellent if utilized properly, it is more powerful to have the activism on the internet manifested in the streets, rather than have a base solely on the internet. The internet is overwhelmed with information, and many causes and social movements appear and disappear within days, a few weeks if the movement is lucky. Movements that take to the streets become less ephemeral; they have characteristics which allow interactions and an emotional connection with faces, leading to what we consider as national icons. Take the Civil Rights Movement, for example, and how Martin Luther King Jr. exemplified the courage of the movement in a human form. The problem with “leaderless” campaigns on the internet, is that when problems arise, no one takes the stand for the movement, and the creators of the movement are let off the hook by attributing the problem to the populace of the group they put together, therefore pulling the entire community down with them.
+                <br/>
+              <p>
+                At this point, it may seem negative to have social movements on the internet, but that is not true entirely. We live in an age where anyone and everyone can have the ability to be connected around the world. The wave of people that pass through are enormous, and it is an impressive accomplishment when it does happen. Never has there been a time where a tool can gather large amounts of people for a cause faster and more efficiently than the internet. As long as that activism is able to mirror their passion onto the streets once they have established a strong communicating community, the world can see social change faster than any other time in history.
+                <br/>
+              <p>
+                Communities, local and global, digital and the internet, offer different set of characteristics that can be used depending on the context of the situation. We may connect with larger numbers of people, like the thousands of Facebook friends or Instagram followers we barely know the name of, but with the same group of people, we can see active social change take part and grow in the communities in our country.
+                <br/>
+              <p>
+                How can we improve our communities and how we work together? How can we make the most out of our relationships, so that our society can make positive improvements, and run as smoothly as a community? 
+              </p>
+              <br/><br/><br/><br/>
+              
+
+              <!-- /////////////////// -->
+              <!-- //      LOVE     // -->
+              <!-- /////////////////// -->
+              <!-- made some text in photoshop for section label -Hans -->
+              <img src="images/section-logos/LOVE_logo.png" id="love"/> 
+              
+              <div class="col-xs-12" style="height:2em;"></div>
+              
+              <image src="images/relation.png" alt="vote" style="float:left;width:50em;"/>
+              <div class="col-xs-12"></div>
+
+              <p>
+              With a progression of technology comes an adapted way of life. The relationships we develop no longer abide by the same rules. The way we meet people and maintain relationships has been adjusted to the digital culture we now live in. 
+              <br/>
+              <p>
+              Dr. Gary Chapman, long-time relationship counselor and author of The 5 Love Languages: The Secret to Love that Lasts believes that there are “five ways that people speak and understand emotional love.” (Chapman 15) The “five emotional love languages” include: words of affirmation, quality time, receiving gifts, acts of service, and physical touch (15). Chapman claims “love plays a central role in life,” and “the need to feel loved is a primary human emotional need;” therefore, we must learn how to express our love to others in a way they will understand—we need to speak their love language (19). On the flip side of this, you need others to speak your love language in order for you to feel loved.
+              <br/>
+              <p>
+              Learning what your primary love language is, and learning how to speak your partner’s, will foster “a long-lasting, loving” relationship (16). Love is a choice, and choosing whether or not you’re going to make the effort is up to the individual. That is, we can choose whether or not to express our love. 
+              <br/>
+              <p>
+              In the Digital Age there are more channels to express love than ever before. Technology has taken charge of the way we shape relationships. Whether it’s through Facebook, Instagram, Tinder, OKcupid, or Match.com, online interaction has become a main form of communication in our society, and because of this shift, we as a society need to alter the way we seek out partners.
+              <br/>
+              <p>
+              When conducting a survey to learn about the ways in which technology has affected relationships in the 21st century, there were significant results that showed that people are still more likely to meet their partner in person, rather than online. At least fifteen out of one hundred people of all ages use online resources to find their significant other. In fact, the majority of the people (about 75%) in relationships who took the survey answered that they met in person. Although, when asking people who are not in relationships how they would attempt to find a partner, most said they would resort to online dating. Interestingly enough, even though online communication is not currently the dominant resource, it seems as if people may be resorting to it more often in the future. 
+              <br/>
+              <p>
+              When interviewing college aged students about dating and finding love, several of them admitted to having Tinder or OKCupid accounts. For those who are not familiar, these are both location-based dating and social discovery applications that facilitate communication between mutually interested users, allowing matched users to chat and potentially form a relationship. While interviewing one couple about meeting online, they pointed out that online dating is refreshing because most sites include a bio about the person, which “gets everything out in the open.” 
+              <br/>
+              <p>
+              The boyfriend talked lovingly about his girlfriend and said that he liked meeting her online because he felt as though they were able to “skip all the ‘BS’ of the first couple of dates.” He also discussed the effortlessness of it all, and how, because their relationship started online, it was much easier to feel in touch all the time. He went on to point out how important it was to the relationship, and how it made him feel connected to her even when she wasn’t around. Communication is an important element in maintaining any relationship, and for them technology and online resources really helped to uphold this principle.
+              <br/>
+              <p>
+              Another question on the survey addressed the question of what people thought was the most important aspect of maintaining a relationship. Almost everyone answered that communication was key. Given these answers, and the change in our culture, it’s interesting to find out that in such a seemingly distant digital age, people still feel that communication is a present, and necessary, aspect to maintaining healthy relationships. 
+              <br/>
+              <p>
+              In fact when interviewing several couples of all ages, we found that most of them used technology to maintain their relationships, i.e. texting, Facebook comments/likes, etc. An older woman, who is age 58 and has been married to her husband of fifteen years, shared with us that the reason her relationship has lasted so long is due to “proper communication.” When asking her to further explain her statement, she said that in person interaction is very important, especially since her husband travels for work. She said, “Being able to see all of his pictures on Facebook, and skyping when he’s away really helps [it] feel like I’m there with him. It closes the gap.”
+              <br/>
+              <p>
+              Given these answers, we found that people agree that communication is a main tool in keeping a healthy relationship. We also found that these people, whether meeting in person or online, use social media as a main form of communication. Given the results of our research, technology seems to play a significant role in our cultural norms, which includes dating. So, can it be concluded that technology and social media have become inevitable components of our “love languages” in order to maintain a long lasting healthy relationship? 
+              <br/>
+              <p>
+              Now that we live in the Digital Age, how do we express these love languages? If words of affirmation are “powerful communicators of love” and can be spoken through “verbal compliments, or words of appreciation,” do Facebook and Instagram likes constitute another type of verbal affirmation (37)? What about comments on social media? Posting comments on social media makes this love language more public in today’s day-in-age. If our comments and compliments are made public, do we hold ourselves back? Or do we say things we don’t truly mean but say for our “image”? being in public can lead people to be insincere in their words and actions. Just because we now have more channels to speak this love language through, it does not mean that our words will be as sincere as they may be behind closed doors.
+              <br/>
+              <p>
+                Well what about the convenient, yet private, form of texting? Does texting make it easier than ever to send your loved one a few words of affirmation throughout the day? It’s a relatively new phenomenon, and it can be handy; however, we have to be careful because texting can send mixed messages to others. For couples, “sometimes our words say one thing, but our tone of voice says another,” and over text it’s hard to tell what someone’s tone is (43). Without knowing the tone in which the words are meant to be spoken, the text message’s meaning can get lost in translation. Luckily, emojis have made the messages we’re sending and receiving clearer. Since we can’t see each other’s faces while texting, the emojis help to express our emotions we’re feeling.
+                <br/>
+               <p>
+                 In the 21st century, quality time can be a hard language to express. Since this is the generation all about “me”, giving up one’s personal time for another can be a lot to ask. In Eve Fairbank’s article, Love in the Age of Big Data, she mentions “the power of ‘we’”. Our world has become so much about independence and career-success that we have lost the sense of togetherness. For couples, it is often hard to give up one’s time working in the office, making money, to spend quality time with his or her partner. Time has, and always will be, “a precious commodity.” (Chapman 55) even when couples do spend time together, out of the office, it can be challenging “in this era of many distractions” to give your partner quality time with undivided, “focused attention,” (59). You can’t multitask when trying to truly speak your partner’s love language.
+                <br/>
+               <p>
+                 What if technology begins speaking your partner’s love language for you? With sites such as Amazon, giving gifts has never been easier. A gift can be given with a click of a mouse, and anything anyone could ever purchase, can be given to their significant other because of all the Internet sites that sell products, goods and services. Does this make the love language of gift giving less powerful since it is so easily done? What about the fact that sites give you recommendations on what you may want to purchase based off of previous purchases? Your computer may be the one giving you the idea for what gift to give, rather than you thinking of it yourself. Does this undermine the quality of the gift? Isn’t the whole “thoughtfulness” of a gift based on the notion that you have put time, effort and consideration into what you want to purchase for your loved one? So, if the Internet’s cookies decide what your partner will like, you’re no longer the one with the “thoughtful” idea.
+                <br/>
+               <p>
+                 Ideas change all the time in society, and the notion of stereotypical gender roles are changing rapidly in our society. With this change, the acts of service love language will most likely have to be modified by many couples. Nowadays, couples have to have a “willingness to examine and change stereotypes in order to express love more effectively.” (102) It can no longer be expected that the woman in the relationship will stay at home to clean and cook, while the man goes out to make money at work. Dr. Chapman says that “our actions are influenced by the model of our parents;” so, for example, if a man’s mother stayed at home all day, he might expect his wife to do the same (100). These expectations and stereotypes are what tear relationships apart. If acts of service is yours or your partner’s love language, it’s important to put stereotypes and preconceived notions aside.
+                <br/>
+               <p>
+                 Acts of service “require thought, planning, time, effort, and energy.” (92) The traditional roles men and women used to play in a relationship are shifting, and therefore so must acts of service. A woman cooking and cleaning may not be the act of service she is willing to perform—maybe picking up dinner or walking the dog is her new way of showing her partner that she loves him. Since there are more nontraditional roles and dating practices, people are going to have to be more creative in showing their love.
+                <br/>
+              <p>
+                 Online dating is one form of a nontraditional dating practice, and because of it we are required to reevaluate the love language of physical touch. Physical touch is not just about sex and can be spoken through small gestures. So, how is this language affected by online dating and long distance relationships? The Digital Age provides us with dating sites and apps where we can communicate with others without ever having any type of physical interaction. Technologies, such as Skype, provide us with the means to maintain long distance relationships more easily, but if we’re far apart from one another, how do we satisfy touch? What if you’re in an online relationship, or a long distance relationship, and your primary love language is physical touch?
+                <br/>
+              <p>
+                If physical touch is your primary love language, but you don’t live by your partner, or see them often, you may have to resort to your secondary love language. By giving up your primary love language, you and your significant other are going to have to try even harder and really amplify your secondary love language.
+                <br/>
+              <p>
+                Although the way we communicate our love languages has changed, the love that forms from them has not. In this digital era, technology can help with the constraints and pressures put on relationships, like distance and not being able to see your loved one every day. With that said, can it also hinder our ability to create meaningful relationships based off in person interactions? Do our technologies connect us or broaden the gap between us? Perhaps this question can only be answered by the individuals in the relationship. Regardless, technology seems to have become integrated into our “love languages” in order to maintain a long lasting, healthy relationship in the Digital Age.
+                <br/>
+              </p>
+             <br/>
+             <image src="images/close_relations_1.jpg" alt="vote" style="float:left;width:50em;">
+
+            <div class="col-xs-12" style="width:5em;"></div>
+            <br/>
+        
+                
+            <div class="col-xs-12" style="height:5em;"></div>
+
+            
+            <br/>
+
+            <p class="clear"> &nbsp; </p>
+
+            <h2 id="conclusion">
+              In the Digital Age, the way we experience inter-personal relationships is vastly affected by how technology changes our relationship with ourselves. Understanding this will make us happier, more fulfilled people in this fundamentally different time. We hope you enjoyed what you read!
+            </h2>
+
+          
+            <br/> <br/> <br/> <br/> <br/> <br/>
+           
+
+            <div class="works-cited"  >
+            <h2> Works Cited: </h2>
+
+            <ul>
+
+              <li>
+              Cameron, Jacqueline. "Community." Telephone interview. 21 Oct. 2015.
+              </li>
+
+              <li>
+                "Definition of Community in English:." Community: Definition of Community in Oxford Dictionary (American English) (US). N.p., n.d. Web. 02 Nov. 2015.
+              </li>
+
+              <li>
+                Gerbaudo, Paolo. Tweets and the Streets: Social Media and Contemporary Activism. N.p.: n.p., n.d. Print.
+              </li>
+
+            </ul>
+             
+            </div>
+
+
+
+            <div class="col-xs-12">
+
+              <image src="images/Singularity.png" alt="singularity">
+            
+              <br/>
+
+              <!-- Janes Logo! -->
+              
+
+
+            </div> 
+
+
+
+
+        </div> <!--- closing of our main contents "container" -->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+
+
+  </body>
+
+
+</html>
